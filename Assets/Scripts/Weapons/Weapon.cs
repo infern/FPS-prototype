@@ -38,9 +38,9 @@ namespace FPS_Prototype.Weapons
 
         public void Trigger()
         {
-            bool canShoot = (Time.time > afterSwapShootingPreventionTimer && !reload.ActionStarted);
+            bool equippedAndNotReloading = (Time.time > afterSwapShootingPreventionTimer && !reload.ActionStarted);
 
-            if (canShoot)
+            if (equippedAndNotReloading)
             {
                 AttemptToFire();
             }
@@ -64,15 +64,7 @@ namespace FPS_Prototype.Weapons
 
         private bool HasEnoughAmmoLoaded()
         {
-            if (ammo.Take())
-            {
-                return true;
-            }
-
-            else
-            {
-                return false;
-            }
+            return ammo.TryToDepleteSingleBullet();
         }
 
         private void FireBullet()
@@ -84,7 +76,7 @@ namespace FPS_Prototype.Weapons
         }
 
 
-        public void AssignToSlot(int slot)
+        public void Select(int slot)
         {
             slotOccupied = slot;
             UIevents.PlayWeaponSlotIconAnimation(ConstantValues.WeaponSelectAnimationString, slotOccupied);

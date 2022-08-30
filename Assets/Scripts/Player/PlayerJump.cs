@@ -33,7 +33,7 @@ namespace FPS_Prototype.Player
 
         void FixedUpdate()
         {
-            HighJumpForceWhileHoldingButton();
+            HoldingButtonForHigherJump();
         }
 
         #endregion
@@ -117,10 +117,10 @@ namespace FPS_Prototype.Player
 
 
             player.rigidBody.velocity = new Vector3(player.rigidBody.velocity.x, force, player.rigidBody.velocity.z);
-            PlaySound();
+            PlayJumpSoundFromQueue();
         }
 
-        void HighJumpForceWhileHoldingButton()
+        void HoldingButtonForHigherJump()
         {
             if (!player.IsTimerFinished(highJumpMaxTimer) && buttonHeld)
             {
@@ -128,7 +128,7 @@ namespace FPS_Prototype.Player
             }
         }
 
-        void PlaySound()
+        void PlayJumpSoundFromQueue()
         {
             player.PlaySound(0, player.settings.JumpSounds[jumpSoundsQueue]);
             jumpSoundsQueue++;

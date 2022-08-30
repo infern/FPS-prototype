@@ -23,12 +23,12 @@ namespace FPS_Prototype.Player
 
         void OnEnable()
         {
-            StatsEventManager.PauseGameTrigger += DisableShoot;
+            StatsEventManager.PauseGameTrigger += DisableToggle;
         }
 
         void OnDisable()
         {
-            StatsEventManager.PauseGameTrigger -= DisableShoot;
+            StatsEventManager.PauseGameTrigger -= DisableToggle;
         }
 
 
@@ -62,7 +62,7 @@ namespace FPS_Prototype.Player
         }
 
 
-        void DisableShoot()
+        void DisableToggle()
         {
             shootingEnabled = !shootingEnabled;
         }

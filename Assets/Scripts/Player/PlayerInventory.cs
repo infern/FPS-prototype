@@ -33,7 +33,9 @@ namespace FPS_Prototype.Player
 
         public void EquipWeapon(int slot)
         {
-            if (Time.time > switchTimer && selectionID != slot)
+            bool swiitchReady = Time.time > switchTimer;
+            bool notTheSameWeapon = selectionID != slot;
+            if (swiitchReady && notTheSameWeapon)
             {
                 switchTimer = Time.time + switchCooldown;
                 if (previousWeapon != null)
@@ -42,16 +44,19 @@ namespace FPS_Prototype.Player
                 }
 
                 selectionID = slot;
-                equippedWeapon = allWeapons[selectionID];
-                previousWeapon = equippedWeapon;
-                equippedWeapon.gameObject.SetActive(true);
-                equippedWeapon.AssignToSlot(selectionID);
-                WeaponData data = equippedWeapon.Data;
-                UIevents.ChangeWeaponText(data);
-
+                AssignWeaponValues();
             }
         }
 
+        private void AssignWeaponValues()
+        {
+            equippedWeapon = allWeapons[selectionID];
+            previousWeapon = equippedWeapon;
+            equippedWeapon.gameObject.SetActive(true);
+            equippedWeapon.Select(selectionID);
+            WeaponData data = equippedWeapon.Data;
+            UIevents.ChangeWeaponText(data);
+        }
 
         public Weapon EquippedWeapon()
         {

@@ -47,7 +47,7 @@ namespace FPS_Prototype.Weapons
 
         #region Unique Methods
 
-        public bool Take()
+        public bool TryToDepleteSingleBullet()
         {
             if (currentAmmo > 0)
             {
