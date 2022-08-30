@@ -1,6 +1,3 @@
-# FPS-prototype
-First person shooter prototype
-
 Unity version: 2021.3.5f1
 
 Packages used:
