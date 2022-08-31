@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace FPS_Prototype.Weapons
 {
-    [RequireComponent(typeof(AmmoMagazineProjectile))]
     public class WeaponProjectile : Weapon
     {
 

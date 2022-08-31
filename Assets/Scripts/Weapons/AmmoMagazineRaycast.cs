@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace FPS_Prototype.Weapons
 {
+    [RequireComponent(typeof(WeaponRaycast))]
     public class AmmoMagazineRaycast : AmmoMagazine
     {
         #region Variables

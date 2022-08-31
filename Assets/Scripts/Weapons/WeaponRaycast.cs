@@ -4,7 +4,6 @@ using FPS_Prototype.Objects;
 
 namespace FPS_Prototype.Weapons
 {
-    [RequireComponent(typeof(AmmoMagazineRaycast))]
     public class WeaponRaycast : Weapon
     {
         #region Variables

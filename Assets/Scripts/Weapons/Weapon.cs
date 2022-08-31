@@ -6,7 +6,7 @@ namespace FPS_Prototype.Weapons
 {
     [RequireComponent(typeof(AmmoMagazine))]
 
-    public class Weapon : MonoBehaviour
+    public abstract class Weapon : MonoBehaviour
     {
         #region Variables
 

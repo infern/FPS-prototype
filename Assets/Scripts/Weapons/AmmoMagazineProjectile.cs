@@ -3,6 +3,7 @@ using UnityEngine.Pool;
 
 namespace FPS_Prototype.Weapons
 {
+    [RequireComponent(typeof(WeaponProjectile))]
     public class AmmoMagazineProjectile : AmmoMagazine
     {
         #region Variables

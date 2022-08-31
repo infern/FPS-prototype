@@ -5,7 +5,7 @@ using FPS_Prototype.UI;
 
 namespace FPS_Prototype.Weapons
 {
-    public class AmmoMagazine : MonoBehaviour
+    public abstract class AmmoMagazine : MonoBehaviour
     {
         #region Variables
 

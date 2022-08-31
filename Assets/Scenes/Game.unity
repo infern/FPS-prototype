@@ -7379,6 +7379,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1277032605}
+  - component: {fileID: 1277032607}
+  - component: {fileID: 1277032606}
   m_Layer: 0
   m_Name: Tutorial
   m_TagString: Untagged
@@ -7405,6 +7407,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1277032606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277032604}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759bb29ac91437c439278fbc348d642b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 0}
+  anim: {fileID: 0}
+  audioSource: {fileID: 0}
+  ammo: {fileID: 0}
+  reload: {fileID: 0}
+  raycastRange: 250
+  gunEnd: {fileID: 0}
+  laserLine: {fileID: 0}
+--- !u!114 &1277032607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277032604}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79adb04f20c90ec49b7f6b8f9dbd7ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAmmo: 0
+  piercedArmorTypes: 0
+  damage: 0
+  currentAmmo: 0
+  laserColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  laserWidth: 1
+  laserDuration: 0.4
 --- !u!4 &1283459227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4758577951730170898, guid: d3548f8b82487bf46a113f515df4dcda, type: 3}
